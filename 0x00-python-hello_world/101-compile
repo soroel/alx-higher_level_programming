@@ -1,4 +1,2 @@
 #!/bin/bash
-python3 compileall $PYFILE -d .
-export PYFILE=$PYFILE
-
+python -m py_compile $PYFILE; mv ./__pycache__/*.pyc "${PYFILE}c"
